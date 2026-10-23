@@ -6,9 +6,9 @@ t = np.linspace(-np.pi/2, np.pi/2, 10000)
 sin = np.sin(t)
 pade = (t - (7 * t**3) /60)/(1 + (t**2)/20)
 
-eroare_t = np.abs(sin - t)
-eroare = np.abs(sin - pade)
-eroare_pade = np.abs(t - pade)
+eroare_sin_t = np.abs(sin - t)
+eroare_sin_pade = np.abs(sin - pade)
+eroare_t_pade = np.abs(t - pade)
 
 
 fig, axs = plt.subplots(3)
@@ -37,25 +37,25 @@ axs[2].set_title('Pade vs t')
 axs[2].legend(['Pade', 't'])
 
 
-axs1[0].plot(t, eroare_t)
+axs1[0].plot(t,eroare_sin_t)
 axs1[0].set_title('Eroare t vs Sin')
 
-axs1[1].plot(t, eroare)
+axs1[1].plot(t, eroare_sin_pade)
 axs1[1].set_title('Eroare Pade vs Sin')
 
-axs1[2].plot(t, eroare_pade)
+axs1[2].plot(t, eroare_t_pade)
 axs1[2].set_title('Eroare Pade vs t') 
 
-axs2[0].plot(t, eroare_t)
+axs2[0].plot(t, eroare_sin_t)
 axs2[0].set_yscale('log')
 axs2[0].set_title('Sin vs t')
 
 
-axs2[1].plot(t, eroare)
+axs2[1].plot(t,eroare_sin_pade)
 axs2[1].set_yscale('log')
 axs2[1].set_title('Eroare Pade vs Sin (log)')
 
-axs2[2].plot(t, eroare_pade)
+axs2[2].plot(t, eroare_t_pade)
 axs2[2].set_yscale('log')
 axs2[2].set_title('Eroare Pade vs t (log)')
 
