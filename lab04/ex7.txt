@@ -1,0 +1,13 @@
+SNR = P_semnal / P_zgomot 
+SNR_db = 10 log_10 SNR
+
+P_semnal = 90 dB
+SNR = 80 dB
+
+SNR_db  = 10 log_10 (P_semnal / P_zgomot)
+80 = 10 log_10 (90 / P_zgomot)
+80 = 10 log_10 90 - 10 log_10 P_zgomot
+log_10 P_zgomot = [(10 log_10 90) - 80] / 10
+log_10 P_zgomot = (90 - 80) / 10
+log_10 P_zgomot = 1 
+P_semnal = 10 dB

@@ -1,0 +1,2 @@
+Pentru ca semnalul discretizat sa contina toate componentele trebuie sa avem minim 2 * f_max.
+Deci, pentru un semnal intre 40 si 200Hz, vom avea nevoie de fs > 400Hz.
